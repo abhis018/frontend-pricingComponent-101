@@ -1,0 +1,37 @@
+body {
+    font-family:Arial, Helvetica, sans-serif;
+}
+.container {
+    display: flex;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.item1 {
+    flex: 33.33%;
+    border: 1px none;
+    height: max-content;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.item2 {
+    flex: 33.33%;
+    border: 1px none;
+    height: fit-content;
+    text-align: center;
+    background-image: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.item3 {
+    flex: 33.33%;
+    border: 1px none;
+    height: fit-content;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+button {
+    border: none;
+    border-radius: 3px;
+    align-items: center;
+    margin-bottom: 10px;
+}
