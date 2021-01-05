@@ -1,37 +1,120 @@
 body {
     font-family:Arial, Helvetica, sans-serif;
+    background-image: url(file:///C:/Users/abhis/OneDrive/Desktop/pricing-component-with-toggle-master/images/bg-bottom.svg), 
+        url(file:///C:/Users/abhis/OneDrive/Desktop/pricing-component-with-toggle-master/images/bg-top.svg);
+    background-position: left bottom, right top;
+    background-size: 300px 300px, 300px 400px;
+    background-repeat: no-repeat, no-repeat;
+    background-attachment: fixed;
+}
+button {
+    width: 80%;
+    height: 12%;
+    color: white;
+    margin-top: 20px;
+}
+h1 {
+    padding: 10px;
 }
 .container {
     display: flex;
     padding-left: 100px;
     padding-right: 100px;
+    margin-top: 5%;
+    font-weight: bold;
+    color: gray;
 }
 
 .item1 {
     flex: 33.33%;
     border: 1px none;
-    height: max-content;
+    height: 300px;
     text-align: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 30px;
+    border-radius: 5px;
 }
 .item2 {
     flex: 33.33%;
     border: 1px none;
-    height: fit-content;
+    height: 300px;
     text-align: center;
     background-image: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 30px;
+    border-radius: 5px;
+    color: white;
 }
 .item3 {
     flex: 33.33%;
     border: 1px none;
-    height: fit-content;
+    height: 300px;
     text-align: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 30px;
+    border-radius: 5px;
 }
 button {
     border: none;
     border-radius: 3px;
     align-items: center;
     margin-bottom: 10px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #ccc;
+    -webkit-transition: .1s;
+    transition: .1s;
+}
+
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .1s;
+    transition: .1s;
+} 
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider::before {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider::before {
+    border-radius: 50%;
 }
